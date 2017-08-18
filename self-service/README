@@ -1,0 +1,14 @@
+[root@CentOS-Carl self-service]# ./modify_pool_member.py -op enable -name app_pool_2 -iq 10.255.72.25 -iq_user admin -iq_pass admin -csv members.csv
+Enumerate all pool members to find: app_pool_2
+app_pool_2
+Found pool: app_pool_2
+https://10.255.72.25/mgmt/cm/adc-core/working-config/ltm/pool/df82ffc0-5cdd-3bd4-bb5e-cb6859f7f0d5/members
+INFO: Perform action enable on pool member boston-node_1:1723
+INFO: BIG-IQ 10.255.72.25 pool member operation. SUCCESS
+
+[root@CentOS-Carl self-service]# ./modify_pool_member.py -op enable -name app_pool_2 -iq 10.255.72.25 -iq_user admin -iq_pass admin -csv members.csv -list
+Enumerate all pool mambers to find: app_pool_2
+Found pool: app_pool_2
+Pool member boston-node_1:1723: State user-up: Session user-enabled
+INFO: BIG-IQ 10.255.72.25 pool member operation. SUCCESS
+

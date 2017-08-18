@@ -1,0 +1,13 @@
+bigiq = 10.255.72.25
+iq_user = admin
+iq_pass = admin
+bigip = 10.255.72.135
+node_name = boston-node_2
+node_address = 100.20.20.30
+pool_name = app_pool_2
+load_balance_mode = round-robin
+virtual_server_name = app_virtual_2
+virtual_dest_address = 100.10.10.20
+virtual_netmask = 255.255.255.255
+virtual_dest_port = 1723
+virtual_source_range = 0.0.0.0/0

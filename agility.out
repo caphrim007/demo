@@ -1,0 +1,154 @@
+
+
+####Begin a trust task between BIGIQ 10.255.72.25 and BIGIP 10.255.72.135####
+1 sec - GET_NUMBER_MANAGED_BIGIPS
+2 sec - POST_FRAMEWORK_INFO
+3 sec - POST_DEVICE_BIGIP_GROUP
+4 sec - POST_DEVICE_BIGIP_TRUST_GROUP
+Trust task status is FINSIHED.
+
+
+####Enable statistics for Device, DNS and LTM on BIGIQ 10.255.72.25 to collect from BIGIP 10.255.72.135####
+1 sec - INSTALL_AGENT
+2 sec - INSTALL_AGENT
+3 sec - INSTALL_AGENT
+4 sec - INSTALL_AGENT
+5 sec - INSTALL_AGENT
+6 sec - INSTALL_AGENT
+7 sec - INSTALL_AGENT
+8 sec - INSTALL_AGENT
+9 sec - INSTALL_AGENT
+10 sec - INSTALL_AGENT
+Enabling statistic task complete. Status is FINSIHED.
+
+
+
+####Discover modules selected LTM, AFM, ASM via resource BIGIP 10.255.72.135####
+{
+    "deviceReference": {
+        "link": "cm/system/machineid-resolver/fc8596ea-d2e4-41ad-9686-b5a1c75fdb49"
+    }, 
+    "generation": 1, 
+    "id": "ea1950f8-f490-4374-90a8-c396ecd72009", 
+    "identityReferences": [
+        {
+            "link": "https://localhost/mgmt/shared/authz/users/admin"
+        }
+    ], 
+    "kind": "cm:global:tasks:device-discovery:discoverysupertaskitemstate", 
+    "lastUpdateMicros": 1499452034899351, 
+    "moduleList": [
+        {
+            "module": "adc_core"
+        }, 
+        {
+            "module": "firewall"
+        }, 
+        {
+            "module": "security_shared"
+        }
+    ], 
+    "ownerMachineId": "e7cc32f4-724c-4033-845d-f4cae1e123ab", 
+    "selfLink": "https://localhost/mgmt/cm/global/tasks/device-discovery/ea1950f8-f490-4374-90a8-c396ecd72009", 
+    "status": "STARTED", 
+    "taskWorkerGeneration": 1, 
+    "userReference": {
+        "link": "https://localhost/mgmt/shared/authz/users/admin"
+    }
+}
+1 sec - STARTED
+2 sec - STARTED
+3 sec - STARTED
+4 sec - STARTED
+5 sec - STARTED
+6 sec - STARTED
+7 sec - STARTED
+8 sec - STARTED
+9 sec - STARTED
+10 sec - STARTED
+11 sec - STARTED
+12 sec - STARTED
+13 sec - STARTED
+14 sec - STARTED
+15 sec - STARTED
+16 sec - STARTED
+17 sec - STARTED
+18 sec - STARTED
+19 sec - STARTED
+Start discovery task complete. Status is FINSIHED.
+
+
+
+####Import module configuration selected LTM, AFM, ASM via resource BIGIP####
+ADC and AFM import
+1 sec - PRE_DEVICE_RESOLUTION
+2 sec - COPY_CONFIG
+3 sec - COMMIT
+
+Import adc and afm configuration for BIGIP 10.255.72.135 complete. Status is FINSIHED.
+
+1 sec - PRE_DEVICE_RESOLUTION
+2 sec - COPY_CONFIG
+
+Import adc and afm configuration for BIGIP 10.255.72.135 complete. Status is FINSIHED.
+
+Trust, Discovery and Import successfully established.
+
+===================================================================
+Create a node in BIG-IQ that represents an application server.
+===================================================================
+
+Application node: boston-node_2 created.
+
+======================================================================
+Create a pool in BIG-IQ that will act as a container for node members.
+=====================================================================
+
+Application Pool: app_pool_2 created.
+
+======================================= 
+Add a pool member node to a BIGIQ pool.
+=======================================
+
+Application Pool: app_pool_2 created and Node boston-node_2:1723 added as a member.
+
+=======================================================================================
+Create a virtual server in BIG-IQ that will act as a container for pool and its members.
+=======================================================================================
+
+Virtual Server: app_virtual_2 created and pool app_pool_2 added.
+
+SUCCESS: - COMPLETE.
+
+
+===================================================================
+Deploy LTM configuration changes to BIGIP now.
+===================================================================
+
+Deploy LTM configuration task: deployTo135 created.
+1 sec - CHECK_OTHER_RUNNING_TASKS
+2 sec - REFRESH_CURRENT_CONFIG_REST
+3 sec - REFRESH_CURRENT_CONFIG_REST
+4 sec - REFRESH_CURRENT_CONFIG_REST
+5 sec - REFRESH_CURRENT_CONFIG_REST
+6 sec - REFRESH_CURRENT_CONFIG_REST
+7 sec - REFRESH_CURRENT_CONFIG_REST
+8 sec - REFRESH_CURRENT_CONFIG_REST
+9 sec - REFRESH_CURRENT_CONFIG_REST
+10 sec - REFRESH_CURRENT_CONFIG_REST
+11 sec - REFRESH_CURRENT_CONFIG_REST
+12 sec - REFRESH_CURRENT_CONFIG_REST
+13 sec - REFRESH_CURRENT_CONFIG_REST
+14 sec - CREATE_SNAPSHOT
+15 sec - CREATE_DIFFERENCE
+16 sec - VERIFY_CONFIG
+17 sec - DISTRIBUTE_CONFIG_REST
+18 sec - DISTRIBUTE_CONFIG_REST
+19 sec - DISTRIBUTE_CONFIG_REST
+20 sec - DISTRIBUTE_CONFIG_REST
+21 sec - DISTRIBUTE_CONFIG_REST
+22 sec - FOLDBACK_DEPLOYED_ADDITIONS
+Deploy task status is FINSIHED.
+
+SUCCESS: - COMPLETE.
+
